@@ -4,7 +4,8 @@ metadata:
   name: nodejs-test
 spec:
   ports:
-  - port: 80
-    targetPort: 8080
+  - name: http
+    port: 80
+    targetPort : http
   selector:
-    app: nodejs-test
+    app: nodejs

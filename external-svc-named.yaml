@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Service
+metada:
+  name: external-svc
+spec:
+  type: ExternalName
+  externalName: something.somewhere.com
+  ports:
+  - port: 80

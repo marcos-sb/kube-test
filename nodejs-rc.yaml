@@ -15,4 +15,5 @@ spec:
       - name: nodejs
         image: marcossb/nodejs-test
         ports:
-        - containerPort: 8080
+        - name: http
+          containerPort: 8080

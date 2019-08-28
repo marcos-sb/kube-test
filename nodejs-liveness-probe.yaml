@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - image: marcossb/nodejs-test-liveness
-    name: nodejs-test-liveness
+    name: main
     livenessProbe:
       httpGet:
         path: /

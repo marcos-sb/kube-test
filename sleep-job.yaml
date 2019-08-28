@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: sleep-job
+spec:
+  template:
+    metadata:
+      labels:
+        app: sleep-job
+    spec:
+      restartPolicy: OnFailure
+      containers:
+      - name: main
+        image: marcossb/job

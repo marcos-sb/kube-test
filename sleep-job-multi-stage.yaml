@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: sleep-job-multi-stage
+spec:
+  completions: 5
+  parallelism: 2
+  template:
+    metadata:
+      labels:
+        app: sleep-job
+    spec:
+      restartPolicy: OnFailure
+      containers:
+      - name: main
+        image: marcossb/job

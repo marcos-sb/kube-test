@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nodejs
+spec:
+  tls:
+  - hosts:
+    - nodejs.marcos-sb.com
+    secretName: tls-secret
+  rules:
+  - host: nodejs.marcos-sb.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: nodejs
+          servicePort: 80
